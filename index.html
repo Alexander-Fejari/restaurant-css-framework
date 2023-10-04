@@ -10,9 +10,9 @@
 
 <body class="lg:grid lg:grid-cols-12 lg:grid-rows-6">
   <header class="bg-gray-800 lg:col-span-full lg:row-span-1">
-    <a href="/">Mange et tais-toi !</a>
+    <a href="/">Mange tout !</a>
     <nav>
-      <ul>
+      <ul class="hidden lg:flex">
         <li><a href="/">accueil</a></li>
         <li><a href="/">menu</a></li>
         <li><a href="/">restaurant</a></li>
@@ -21,17 +21,19 @@
     </nav>
     <button>
       <!-- Icon when menu is closed.Menu open: "hidden", Menu closed: "block"-->
-      <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+      <svg class="block h-6 w-6 menu-open" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         aria-hidden="true">
         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
       </svg>
       <!-- Icon when menu is open. Menu open: "block", Menu closed: "hidden"-->
-      <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+      <svg class="hidden h-6 w-6 menu-close" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         aria-hidden="true">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
       </svg>
     </button>
+
   </header>
+
 </body>
 
 </html>

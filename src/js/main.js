@@ -1,15 +1,21 @@
 import '../css/main.css';
 
-// toggle menu mobile
-const mobileMenu = document.querySelector('nav ul');
 const toggleButton = document.querySelector('button');
+const menuMobile = document.querySelector('nav ul');
 
 toggleButton.addEventListener('click', () => {
-    if (mobileMenu.classList.contains('block')) {
-        mobileMenu.classList.remove('block');
-        mobileMenu.classList.add('hidden');
+    const menuOpenIcon = toggleButton.querySelector('.menu-open');
+    const menuCloseIcon = toggleButton.querySelector('.menu-close');
+
+    if (menuOpenIcon.classList.contains('hidden')) {
+        menuOpenIcon.classList.remove('hidden');
+        menuCloseIcon.classList.add('hidden');
+        menuMobile.classList.add('hidden');
+        menuMobile.classList.remove('flex');
     } else {
-        mobileMenu.classList.remove('hidden');
-        mobileMenu.classList.add('block');
+        menuOpenIcon.classList.add('hidden');
+        menuCloseIcon.classList.remove('hidden');
+        menuMobile.classList.remove('hidden');
+        menuMobile.classList.add('flex');
     }
 });

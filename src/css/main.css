@@ -10,18 +10,18 @@
         @apply w-screen h-screen font-sans;
     }
     header {
-        @apply h-max flex flex-row flex-nowrap justify-between items-start p-4 lg:items-center;
+        @apply h-max flex flex-row flex-nowrap justify-between items-start p-4 animate-fade lg:items-center;
     }
     a {
-        @apply w-40 m-3.5 
+        @apply w-40 m-3.5 text-white uppercase;
     }
     nav {
-        @apply w-full flex-col flex-nowrap justify-evenly items-center px-4;
+        @apply w-full h-full flex-col flex-nowrap justify-evenly items-center md:px-4;
     }
     ul {
-        @apply  w-full h-screen flex-col justify-center items-center text-center lg:w-auto lg:h-fit lg:flex-row lg:justify-evenly lg:items-start;
+        @apply w-full h-[96vh] flex-col justify-evenly items-center text-center animate-fade md:h-[97.3vh]  lg:w-auto lg:h-fit lg:flex-row lg:justify-evenly lg:items-start;
     }
     button {
-        @apply m-3.5 lg:hidden
+        @apply m-3.5 lg:hidden;
     }
 }

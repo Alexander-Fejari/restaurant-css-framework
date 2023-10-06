@@ -8,99 +8,101 @@
     <title>Restaurant</title>
 </head>
 
-<body class="w-full h-screen lg:grid lg:grid-cols-12 lg:grid-rows-6 lg:auto-rows-fr lg:auto-cols-fr bg-slate-950 font-sans">
-<header class="w-full lg:h-36 bg-slate-950 flex flex-row justify-center lg:col-span-full lg:row-span-1  z-50 navbar lg:fixed">
-    <div class="navbar">
-        <!-- Contenu navbar -->
-        <div class="dropdown">
-            <button class="btn btn-ghost btn-circle smd:hidden menu-open" tabindex="0">
-                <svg class="h-[1.875rem] w-[1.875rem]" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                     xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4 6h16M4 12h16M4 18h7" fill="#ffff" stroke-linecap="round" stroke-linejoin="round"
-                          stroke-width="2"/>
-                </svg>
-            </button>
-            <button class="btn btn-ghost btn-circle hidden smd:hidden menu-close" tabindex="0">
-                <svg class="h-[1.875rem] w-[1.875rem]" fill="none" viewBox="0 0 24 24"
-                     xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6.99486 7.00636C6.60433 7.39689 6.60433 8.03005 6.99486 8.42058L10.58 12.0057L6.99486 15.5909C6.60433 15.9814 6.60433 16.6146 6.99486 17.0051C7.38538 17.3956 8.01855 17.3956 8.40907 17.0051L11.9942 13.4199L15.5794 17.0051C15.9699 17.3956 16.6031 17.3956 16.9936 17.0051C17.3841 16.6146 17.3841 15.9814 16.9936 15.5909L13.4084 12.0057L16.9936 8.42059C17.3841 8.03007 17.3841 7.3969 16.9936 7.00638C16.603 6.61585 15.9699 6.61585 15.5794 7.00638L11.9942 10.5915L8.40907 7.00636C8.01855 6.61584 7.38538 6.61584 6.99486 7.00636Z"
-                          fill="#ffff"/>
-                </svg>
-            </button>
-            <ul class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-slate-900 rounded-box w-52 md:flex md:flex-row md:items-center"
-                tabindex="0">
-                <li><a>Accueil</a></li>
-                <li><a>Menu</a></li>
-                <li><a>Restaurant</a></li>
-                <li><a>Contacte</a></li>
-            </ul>
+<body class="w-full bg-slate-950 font-sans">
+<div class="lg:grid lg:grid-cols-12 lg:grid-rows-[9rem_1fr_1fr_1fr_1fr_9rem] lg:auto-rows-fr lg:auto-cols-fr">
+    <header class="w-full h-full lg:h-36 bg-slate-950 flex flex-row justify-center lg:item-center lg:col-span-12 z-50 navbar lg:fixed lg:content-center">
+        <div class="navbar">
+            <!-- Contenu navbar -->
+            <div class="dropdown">
+                <button class="btn btn-ghost btn-circle smd:hidden menu-open" tabindex="0">
+                    <svg class="h-[1.875rem] w-[1.875rem]" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 6h16M4 12h16M4 18h7" fill="#ffff" stroke-linecap="round" stroke-linejoin="round"
+                              stroke-width="2"/>
+                    </svg>
+                </button>
+                <button class="btn btn-ghost btn-circle hidden smd:hidden menu-close" tabindex="0">
+                    <svg class="h-[1.875rem] w-[1.875rem]" fill="none" viewBox="0 0 24 24"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.99486 7.00636C6.60433 7.39689 6.60433 8.03005 6.99486 8.42058L10.58 12.0057L6.99486 15.5909C6.60433 15.9814 6.60433 16.6146 6.99486 17.0051C7.38538 17.3956 8.01855 17.3956 8.40907 17.0051L11.9942 13.4199L15.5794 17.0051C15.9699 17.3956 16.6031 17.3956 16.9936 17.0051C17.3841 16.6146 17.3841 15.9814 16.9936 15.5909L13.4084 12.0057L16.9936 8.42059C17.3841 8.03007 17.3841 7.3969 16.9936 7.00638C16.603 6.61585 15.9699 6.61585 15.5794 7.00638L11.9942 10.5915L8.40907 7.00636C8.01855 6.61584 7.38538 6.61584 6.99486 7.00636Z"
+                              fill="#ffff"/>
+                    </svg>
+                </button>
+                <ul class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-slate-900 rounded-box w-52 md:flex md:flex-row md:items-center"
+                    tabindex="0">
+                    <li><a>Accueil</a></li>
+                    <li><a>Menu</a></li>
+                    <li><a>Restaurant</a></li>
+                    <li><a>Contacte</a></li>
+                </ul>
+            </div>
+            <div class="navbar-center hidden smd:flex">
+                <ul class="menu menu-horizontal"
+                    tabindex="0">
+                    <li><a>Accueil</a></li>
+                    <li><a>Menu</a></li>
+                    <li><a>Restaurant</a></li>
+                    <li><a>Contacte</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="navbar-center hidden smd:flex">
-            <ul class="menu menu-horizontal"
-                tabindex="0">
-                <li><a>Accueil</a></li>
-                <li><a>Menu</a></li>
-                <li><a>Restaurant</a></li>
-                <li><a>Contacte</a></li>
-            </ul>
+        <div class="navbar-end">
+            <a class="btn btn-ghost normal-case text-xl">Manges et taîs-toi !</a>
         </div>
-    </div>
-    <div class="navbar-end">
-        <a class="btn btn-ghost normal-case text-xl">Manges et taîs-toi !</a>
-    </div>
-</header>
-<main class="bg-slate-950 h-full lg:col-span-full lg:row-start-2 lg:row-span-5">
-    <div class="hero img min-h-[90vh] max-h-[100vh]">
-        <div class="hero-overlay bg-opacity-60"></div>
-        <div class="hero-content text-center text-neutral-content">
-            <div class="max-w-md">
-                <div class="container mx-auto">
-                    <!-- Jumbotron avec arrière-plan flou transparent -->
-                    <div class="relative bg-opacity-70 backdrop-blur-[2px] text-white py-16 px-6 rounded-lg shadow-lg text-center lg:backdrop-blur-sm">
-                        <!-- Contenu du Jumbotron -->
-                        <h1 class="text-4xl font-bold">Découvrez nos dernières actualités</h1>
-                        <p class="mt-4">Restez informé de nos offres spéciales et de nos événements passionnants.
-                        </p>
-                        <div class="mt-8 flex flex-row justify-center items-center">
-                            <button class="btn btn-outline flex-1">Promos</button>
-                            <button class="btn btn-outline flex-1 ml-4">Événements</button>
+    </header>
+    <main class="bg-slate-950 h-full lg:col-span-12 lg:row-start-2 lg:row-span-4">
+        <div class="hero img min-h-[90vh] max-h-[100vh]">
+            <div class="hero-overlay bg-opacity-60"></div>
+            <div class="hero-content text-center text-neutral-content">
+                <div class="max-w-md">
+                    <div class="container mx-auto">
+                        <!-- Jumbotron avec arrière-plan flou transparent -->
+                        <div class="relative bg-opacity-70 backdrop-blur-[2px] text-white py-16 px-6 rounded-lg shadow-lg text-center lg:backdrop-blur-sm">
+                            <!-- Contenu du Jumbotron -->
+                            <h1 class="text-4xl font-bold">Découvrez nos dernières actualités</h1>
+                            <p class="mt-4">Restez informé de nos offres spéciales et de nos événements passionnants.
+                            </p>
+                            <div class="mt-8 flex flex-row justify-center items-center">
+                                <button class="btn btn-outline flex-1">Promos</button>
+                                <button class="btn btn-outline flex-1 ml-4">Événements</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class=" w-full py-8 px-4 bg-slate-950 text-white lg:col-span-full lg:row-start-5 lg:row-span-5">
-        <h2 class="text-2xl text-center py-8">A ne pas ratez !</h2>
-        <div class="lg:flex lg:flex-row lg:flex-nowrap lg:justify-around lg:items-center md:flex md:flex-row md:flex-nowrap md:justify-around md:items-center">
-            <div class="card card-side bg-slate-900 shadow-xl w-full h-80 lg:w-[50%] lg:h-80 lg:flex-1">
-                <figure><img alt="Frites avec du sel" class="rounded" src="./src/img/frites.jpg"/></figure>
-                <div class="card-body">
-                    <h2 class="card-title">Promotions sur les frites</h2>
-                    <p>Pour le prix d'une petite frite, vous recevez une grande frite.</p>
-                    <div class="card-actions justify-start lg:justify-end">
-                        <button class="btn btn-primary">Achetez</button>
+        <div class=" w-full py-8 px-4 bg-slate-950 text-white lg:col-span-full lg:row-start-5 lg:row-span-5">
+            <h2 class="text-2xl text-center py-8 lg:row-span-1">A ne pas rater !</h2>
+            <div class="lg:row-span-4 md:flex md:flex-row md:flex-nowrap md:justify-around md:items-center lg:flex lg:flex-row lg:flex-nowrap lg:justify-around lg:items-center">
+                <div class="card card-side flex-row bg-slate-900 shadow-xl my-8 md:w-[50%]  md:h-80 md:ml-8 lg:row-span-4 lg:w-[50%] lg:h-80 lg:flex-1">
+                    <figure><img alt="Frites avec du sel" class="rounded" src="./src/img/frites.jpg"/></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Promotions sur les frites</h2>
+                        <p>Pour le prix d'une petite frite, vous recevez une grande frite.</p>
+                        <div class="card-actions justify-start lg:justify-end">
+                            <button class="btn btn-primary">Achetez</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="card card-side flex-row-reverse bg-slate-900 shadow-xl my-8 md:w-[50%]  md:h-80 md:ml-8 lg:ml-8 lg:w-[50%] lg:h-80 lg:flex-1">
-                <figure><img alt="Frites avec du sel" class="rounded" src="./src/img/eating-burger.jpg"/></figure>
-                <div class="card-body">
-                    <h2 class="card-title">Prochain évenements</h2>
-                    <p>Prochainement le concours du plus gros mangeur de smash burger</p>
-                    <div class="card-actions justify-start lg:justify-end">
-                        <button class="btn btn-primary">Participez</button>
+                <div class="card card-side flex-row-reverse bg-slate-900 shadow-xl my-8 md:w-[50%]  md:h-80 md:mx-8 lg:row-span-4 lg:mx-8 lg:w-[50%] lg:h-80 lg:flex-1">
+                    <figure><img alt="Frites avec du sel" class="rounded" src="./src/img/eating-burger.jpg"/>
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Prochain évenements</h2>
+                        <p>Prochainement le concours du plus gros mangeur de smash burger</p>
+                        <div class="card-actions justify-start lg:justify-end">
+                            <button class="btn btn-primary">Participez</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <footer class="lg:h-36 lg:col-span-full lg:row-span-1 footer footer-center p-4 bg-slate-900 text-base-content ">
+    </main>
+    <footer class="lg:h-36 lg:col-span-full lg:row-span-1 lg:row-start-6 footer footer-center p-4 bg-slate-900 text-base-content ">
         <aside>
             <p>Manges et taîs-toi © 2023 - BeCode</p>
         </aside>
     </footer>
-</main>
-
+</div>
 </body>
 </html>

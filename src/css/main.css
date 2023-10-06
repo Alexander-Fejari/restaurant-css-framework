@@ -9,16 +9,10 @@
     main {
         height: calc(100vh - 9rem);
     }
-    .imgSizeMobile {
-        height: calc(100vh - 5rem);
-        background-image: url('../src/img/burger-slow.jpg');
-    }
-    .imgSizeDesktop {
-        height: calc(100vh - 9rem);
-        background-image: url('../src/img/burger-slow.jpg');
-        @apply bg-slate-950
-    }
 
+    .img {
+        background-image: url('../src/img/burger-slow.jpg');
+    }
 }
 
 .card figure {

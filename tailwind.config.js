@@ -6,10 +6,13 @@ export default {
             fontFamily: {
                 sans: ['Roboto', 'sans-serif'],
             },
+            screens: {
+                'smd': '770px',
+            },
             keyframes: {
                 fadeInTop: {
-                    '0%': { opacity: '0', transform: 'translateY(-50px)' },
-                    '100%': { opacity: '1', transform: 'translateY(0)' },
+                    '0%': {opacity: '0', transform: 'translateY(-50px)'},
+                    '100%': {opacity: '1', transform: 'translateY(0)'},
                 },
             },
             animation: {

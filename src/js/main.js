@@ -1,17 +1,22 @@
 import '../css/main.css';
 
-const toggleButton = document.querySelector('.dropdown button');
-const menuMobile = document.querySelector('nav ul');
+// Sélectionnez les éléments du dropdown
+const menuOpenButton = document.querySelector('.menu-open');
+const menuCloseButton = document.querySelector('.menu-close');
+const menuContent = document.querySelector('.menu-sm');
 
-const menuOpen = document.querySelector('.menu-open')
-const menuClose = document.querySelector('.menu-close')
+// Ajoutez un gestionnaire d'événement au bouton "menu-open" pour ouvrir le dropdown
+menuOpenButton.addEventListener('click', () => {
+    menuContent.classList.add('flex');
+    menuContent.classList.remove('hidden');
+    menuOpenButton.classList.add('hidden');
+    menuCloseButton.classList.remove('hidden');
+});
 
-
-/*
-toggleButton.addEventListener('click', () => {
-    menuOpen.classList.add('hidden')
-    else {
-        menuClose.classList.remove('hidden')
-        menuClose.classList.add('flex')
-    }
-})*/
+// Ajoutez un gestionnaire d'événement au bouton "menu-close" pour fermer le dropdown
+menuCloseButton.addEventListener('click', () => {
+    menuContent.classList.remove('flex');
+    menuContent.classList.add('hidden');
+    menuOpenButton.classList.remove('hidden');
+    menuCloseButton.classList.add('hidden');
+});

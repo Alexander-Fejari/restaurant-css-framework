@@ -10,7 +10,7 @@
 
 <body class="w-full bg-slate-950 font-sans">
 <div class="lg:grid lg:grid-cols-12 lg:grid-rows-[9rem_1fr_1fr_1fr_1fr_9rem] lg:auto-rows-fr lg:auto-cols-fr">
-    <header class="w-full h-full lg:h-36 bg-slate-950 flex flex-row justify-center lg:item-center lg:col-span-12 z-50 navbar lg:fixed lg:content-center">
+    <header class="w-full h-full lg:h-36 bg-slate-950 flex flex-row justify-center item-center lg:col-span-12 z-50 navbar lg:fixed lg:content-center">
         <div class="navbar">
             <!-- Contenu navbar -->
             <div class="dropdown">
@@ -28,7 +28,7 @@
                               fill="#ffff"/>
                     </svg>
                 </button>
-                <ul class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-slate-900 rounded-box w-52 md:flex md:flex-row md:items-center"
+                <ul class="menu menu-sm absolute mt-3 z-[1] p-2 shadow bg-slate-900 rounded-box w-52 hidden"
                     tabindex="0">
                     <li><a>Accueil</a></li>
                     <li><a>Menu</a></li>
@@ -74,7 +74,7 @@
         <div class=" w-full py-8 px-4 bg-slate-950 text-white lg:col-span-full lg:row-start-5 lg:row-span-5">
             <h2 class="text-2xl text-center py-8 lg:row-span-1">A ne pas rater !</h2>
             <div class="lg:row-span-4 md:flex md:flex-row md:flex-nowrap md:justify-around md:items-center lg:flex lg:flex-row lg:flex-nowrap lg:justify-around lg:items-center">
-                <div class="card card-side flex-row bg-slate-900 shadow-xl my-8 md:w-[50%]  md:h-80 md:ml-8 lg:row-span-4 lg:w-[50%] lg:h-80 lg:flex-1">
+                <div class="card card-side flex-row bg-slate-900 shadow-xl my-8 h-80 md:w-[50%] md:ml-8 lg:row-span-4 lg:w-[50%] lg:h-80 lg:flex-1">
                     <figure><img alt="Frites avec du sel" class="rounded" src="./src/img/frites.jpg"/></figure>
                     <div class="card-body">
                         <h2 class="card-title">Promotions sur les frites</h2>
@@ -84,7 +84,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card card-side flex-row-reverse bg-slate-900 shadow-xl my-8 md:w-[50%]  md:h-80 md:mx-8 lg:row-span-4 lg:mx-8 lg:w-[50%] lg:h-80 lg:flex-1">
+                <div class="card card-side flex-row-reverse bg-slate-900 shadow-xl my-8 h-80 md:w-[50%]  md:mx-8 lg:row-span-4 lg:mx-8 lg:w-[50%] lg:h-80 lg:flex-1">
                     <figure><img alt="Frites avec du sel" class="rounded" src="./src/img/eating-burger.jpg"/>
                     </figure>
                     <div class="card-body">

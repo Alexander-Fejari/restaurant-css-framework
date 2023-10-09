@@ -1,4 +1,5 @@
 <!doctype html>
+<!--suppress ALL -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +7,7 @@
           name="viewport">
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
     <script defer src="./src/js/main.js" type="module"></script>
-    <title>Galerie photos du restaurant</title>
+    <title>Menu du restaurant</title>
 </head>
 <body class="w-full bg-slate-950 font-sans">
 <div class="lg:grid lg:grid-cols-12 lg:grid-rows-[9rem_1fr_1fr_1fr_1fr_9rem] lg:auto-rows-fr lg:auto-cols-fr">
@@ -32,7 +33,7 @@
                     tabindex="0">
                     <li><a href="./index.html">Accueil</a></li>
                     <li><a href="gallery.html">Galerie</a></li>
-                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="gallery.html">Menu</a></li>
                     <li><a>Restaurant</a></li>
                     <li><a>Contacte</a></li>
                 </ul>
@@ -42,7 +43,7 @@
                     tabindex="0">
                     <li><a href="./index.html">Accueil</a></li>
                     <li><a href="gallery.html">Galerie</a></li>
-                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="gallery.html">Menu</a></li>
                     <li><a>Restaurant</a></li>
                     <li><a>Contacte</a></li>
                 </ul>
@@ -52,25 +53,44 @@
             <a class="btn btn-ghost normal-case text-xl">Manges et taîs-toi !</a>
         </div>
     </header>
-    <main class="bg-slate-950 flex flex-col justify-evenly items-center lg:col-span-12 lg:row-start-2 lg:row-span-4">
-        <h2 class="m-8 text-xl lg:text-6xl">Gallerie photos du restaurant</h2>
-        <div class="carousel w-full h-sm flex flex-col px-8 lg:flex-row lg:justify-around">
-            <div class="carousel-item w-full py-8 lg:max-w-sm" id="item1">
-                <img class="w-full" src="./src/img/gallery/img%20(1).jpg"/>
-            </div>
-            <div class="carousel-item w-full py-8 lg:max-w-sm" id="item2">
-                <img class="w-full" src="./src/img/gallery/img%20(2).jpg"/>
-            </div>
-            <div class="carousel-item w-full py-8 lg:max-w-sm" id="item3">
-                <img class="w-full" src="./src/img/gallery/img%20(3).jpg"/>
-            </div>
-        </div>
-        <div class="my-8 flex justify-center w-full py-2 gap-2" id="pagination">
-            <a class="btn btn-xs" href="/">1</a>
-            <a class="btn btn-xs" href="/">2</a>
-            <a class="btn btn-xs" href="/">3</a>
-            <a class="btn btn-xs" href="/">4</a>
-        </div>
+    <main
+            class="bg-slate-950 w-full flex flex-col justify-evenly items-center lg:col-span-12 lg:row-start-2 lg:row-span-4">
+        <h2 class="m-4 text-xl lg:text-6xl">Menu Manges et taîs-toi</h2>
+        <ul class="h-full flex flex-col justify-stretch items-center text-center">
+            <!-- Catégorie Entrées -->
+            <li class="w-full flex flex-col justify-evenly items-center">
+                <details class="bg-white rounded-lg p-4 shadow-lg mb-4" open>
+                    <summary class="text-5xl my-8">Entrées</summary>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><a>Élément 1</a></li>
+                        <li><a>Élément 2</a></li>
+                        <li><a>Élément 2</a></li>
+                    </ul>
+                </details>
+            </li>
+            <!-- Catégorie Plats -->
+            <li class="w-full h-[45rem]">
+                <details class="bg-white rounded-lg p-4 shadow-lg mb-4" open>
+                    <summary class="text-5xl my-8">Plats</summary>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><a>Élément 1</a></li>
+                        <li><a>Élément 2</a></li>
+                        <li><a>Élément 2</a></li>
+                    </ul>
+                </details>
+            </li>
+            <!-- Catégorie dessert -->
+            <li class="w-full h-[45rem]">
+                <details class="bg-white rounded-lg p-4 shadow-lg mb-4" open>
+                    <summary class="text-5xl my-8">Plats</summary>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><a>Élément 1</a></li>
+                        <li><a>Élément 2</a></li>
+                        <li><a>Élément 2</a></li>
+                    </ul>
+                </details>
+            </li>
+        </ul>
     </main>
     <footer class="lg:h-36 lg:col-span-full lg:row-span-1 lg:row-start-6 footer footer-center p-4 bg-slate-900 text-base-content ">
         <aside>

@@ -2,3 +2,26 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+/* custom */
+@layer base {
+    main {
+        height: calc(100vh - 9rem);
+    }
+
+    .img {
+        background-image: url('../../src/img/burger-slow.jpg');
+    }
+
+    ul li a {
+        font-size: 1.75rem;
+    }
+}
+
+.card figure {
+    justify-content: unset;
+    align-items: unset;
+}
+
+

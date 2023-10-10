@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
     <script defer src="./src/js/main.js" type="module"></script>
     <link href="./src/img/favicon-32x32.png" rel="icon" type="image/x-icon"/>
-    <title>Restaurant</title>
+    <title>Galerie photos du restaurant</title>
 </head>
-
 <body class="w-full bg-slate-950 font-sans">
 <div class="lg:grid lg:grid-cols-12 lg:grid-rows-[9rem_1fr_1fr_1fr_1fr_9rem] lg:auto-rows-fr lg:auto-cols-fr">
     <header class="w-full h-full lg:h-36 bg-slate-950 flex flex-row justify-center item-center lg:col-span-12 z-50 navbar lg:fixed lg:content-center">
@@ -35,7 +35,7 @@
                     <li><a href="gallery.html">Galerie</a></li>
                     <li><a href="menu.html">Menu</a></li>
                     <li><a href="restaurants.html">Restaurant</a></li>
-                    <li><a href="/">Contacte</a></li>
+                    <li><a href="contacte.html">Contacte</a></li>
                 </ul>
             </div>
             <div class="navbar-center hidden smd:flex">
@@ -53,52 +53,62 @@
             <a class="btn btn-ghost normal-case text-xl">Manges et taîs-toi !</a>
         </div>
     </header>
-    <main class="bg-slate-950 h-full mb-8 lg:col-span-12 lg:row-start-2 lg:row-span-4">
-        <div class="hero img min-h-[90vh] max-h-[100vh]">
-            <div class="hero-overlay bg-opacity-60"></div>
-            <div class="hero-content text-center text-neutral-content">
-                <div class="lg:max-w-[45rem]">
-                    <div class="container mx-auto">
-                        <!-- Jumbotron avec arrière-plan flou transparent -->
-                        <div class="relative bg-opacity-70 backdrop-blur-[2px] text-white py-16 px-6 rounded-lg shadow-lg text-center lg:backdrop-blur-sm">
-                            <!-- Contenu du Jumbotron -->
-                            <h1 class="text-4xl font-bold lg:text-7xl">Découvrez nos dernières actualités</h1>
-                            <p class="mt-4">Restez informé de nos offres spéciales et de nos événements passionnants.
-                            </p>
-                            <div class="mt-8 flex flex-row justify-center items-center">
-                                <button class="btn btn-outline flex-1">Promos</button>
-                                <button class="btn btn-outline flex-1 ml-4">Événements</button>
-                            </div>
-                        </div>
-                    </div>
+    <main class="bg-slate-950 flex flex-col justify-evenly items-center lg:col-span-12 lg:row-start-2 lg:row-span-4">
+        <div class="flex flex-col items-center md:w-1/2">
+            <h1 class="text-3xl font-bold mb-4">Formulaire de Contact</h1>
+
+            <!-- Formulaire de contact -->
+            <form action="#" class="p-4 rounded shadow-md w-full" method="POST">
+                <!-- Prénom -->
+                <div class="mb-4">
+                    <label class="block text-sm font-bold mb-2" for="firstname">Prénom</label>
+                    <input class="w-full px-3 py-2 border rounded-lg" id="firstname" name="firstname" required
+                           type="text">
                 </div>
-            </div>
-        </div>
-        <div class=" w-full py-8 px-4 bg-slate-950 text-white lg:col-span-full lg:row-start-5 lg:row-span-5">
-            <h2 class="text-5xl text-center py-8 lg:row-span-1">A ne pas rater !</h2>
-            <div class="lg:row-span-4 md:flex md:flex-row md:flex-nowrap md:justify-around md:items-center lg:flex lg:flex-row lg:flex-nowrap lg:justify-around lg:items-center">
-                <div class="card card-side flex-row bg-slate-900 shadow-xl my-8 h-80 md:w-[50%] md:ml-8 lg:row-span-4 lg:w-[50%] lg:h-80 lg:flex-1">
-                    <figure><img alt="Frites avec du sel" class="rounded" src="./src/img/frites.jpg"/></figure>
-                    <div class="card-body justify-start items-start w-full">
-                        <h2 class="card-title">Promotions sur les frites</h2>
-                        <p>Pour le prix d'une petite frite, vous recevez une grande frite.</p>
-                        <div class="card-actions justify-start  lg:justify-end">
-                            <button class="btn btn-primary w-full">Achetez</button>
-                        </div>
-                    </div>
+
+                <!-- Nom de famille -->
+                <div class="mb-4">
+                    <label class="block text-sm font-bold mb-2" for="lastname">Nom de Famille</label>
+                    <input class="w-full px-3 py-2 border rounded-lg" id="lastname" name="lastname" required
+                           type="text">
                 </div>
-                <div class="card card-side flex-row-reverse bg-slate-900 shadow-xl my-8 h-80 md:w-[50%]  md:mx-8 lg:row-span-4 lg:mx-8 lg:w-[50%] lg:h-80 lg:flex-1">
-                    <figure><img alt="Frites avec du sel" class="rounded" src="./src/img/eating-burger.jpg"/>
-                    </figure>
-                    <div class="card-body justify-start items-start w-full">
-                        <h2 class="card-title">Prochain évenements</h2>
-                        <p>Prochainement le concours du plus gros mangeur de smash burger</p>
-                        <div class="card-actions justify-start  lg:justify-end">
-                            <button class="btn btn-primary w-full">Participez</button>
-                        </div>
-                    </div>
+
+                <!-- Email -->
+                <div class="mb-4">
+                    <label class="block text-sm font-bold mb-2" for="email">Email</label>
+                    <input class="w-full px-3 py-2 border rounded-lg" id="email" name="email" required type="email">
                 </div>
-            </div>
+
+                <!-- Sujet du Message (Liste déroulante) -->
+                <div class="mb-4">
+                    <label class="block text-sm font-bold mb-2" for="subject">Sujet du Message</label>
+                    <select class="w-full px-3 py-2 border rounded-lg" id="subject" name="subject">
+                        <option value="1">Question</option>
+                        <option value="2">Reservation</option>
+                        <option value="3">Demande de partenariat</option>
+                        <option value="4">Autre</option>
+                    </select>
+                </div>
+
+                <!-- Message -->
+                <div class="mb-4">
+                    <label class="block text-sm font-bold mb-2" for="message">Message</label>
+                    <textarea class="w-full px-3 py-2 border rounded-lg" id="message" name="message" required
+                              rows="4"></textarea>
+                </div>
+
+                <!-- Bouton Envoyer avec icône Font Awesome -->
+                <div class="mb-4">
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded-lg flex items-center" type="submit">
+                        Envoyer
+                        <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" stroke-linecap="round" stroke-linejoin="round"
+                                  stroke-width="2"></path>
+                        </svg>
+                    </button>
+                </div>
+            </form>
         </div>
     </main>
     <footer class="mt-8 lg:h-36 lg:col-span-full lg:row-span-1 lg:row-start-6 footer footer-center p-4 bg-slate-900 text-base-content ">

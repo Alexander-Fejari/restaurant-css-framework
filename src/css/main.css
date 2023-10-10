@@ -13,6 +13,10 @@
     .img {
         background-image: url('../../src/img/burger-slow.jpg');
     }
+
+    ul li a {
+        font-size: 1.75rem;
+    }
 }
 
 .card figure {

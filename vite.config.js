@@ -1,22 +1,25 @@
-import {resolve} from "path";
+import {dirname, resolve} from "path";
+import {fileURLToPath} from 'url'; // Importez la fonction fileURLToPath
+import {defineConfig} from 'vite';
 
-const root = resolve(dirname, './');
-const outDir = resolve(dirname, 'dist');
+const __filename = fileURLToPath(import.meta.url); // Obtenez le nom du fichier en cours
+const __dirname = dirname(__filename); // Obtenez le répertoire en cours
 
-export default {
+const outDir = resolve(__dirname, 'dist');
+
+export default defineConfig({
     base: '/restaurant-css-framework/',
-    root,
     build: {
         outDir,
         emptyOutDir: true,
         rollupOptions: {
             input: {
-                main: resolve(root, 'index.html'),
-                menu: resolve(root, 'menu', 'menu.html'),
-                about_us: resolve(root, 'about_us', 'restaurants.html'),
-                gallery: resolve(root, 'gallery', 'gallery.html'),
-                contact: resolve(root, 'contact', 'contacte.html'),
+                main: resolve(__dirname, 'index.html'),
+                menu: resolve(__dirname, 'menu.html'),
+                about_us: resolve(__dirname, 'restaurants.html'),
+                gallery: resolve(__dirname, 'gallery.html'),
+                contact: resolve(__dirname, 'contacte.html'),
             }
         }
     }
-}
+});

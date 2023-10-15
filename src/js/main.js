@@ -41,28 +41,24 @@ boutonsPagination.forEach((bouton, index) => {
     // Changez la source des images en fonction du bouton cliqué
     switch (index) {
       case 0:
-        page1.querySelector("img").src = "./src/img/gallery/hamburger.jpg";
-        page2.querySelector("img").src = "./src/img/gallery/hotdog-multi.jpg";
-        page3.querySelector("img").src =
-          "./src/img/gallery/hamburger-cheese.jpg";
+        page1.querySelector("img").src = "./img/gallery/hamburger.jpg";
+        page2.querySelector("img").src = "./img/gallery/hotdog-multi.jpg";
+        page3.querySelector("img").src = "./img/gallery/hamburger-cheese.jpg";
         break;
       case 1:
-        page1.querySelector("img").src = "./src/img/gallery/frites-sel.jpg";
-        page2.querySelector("img").src =
-          "./src/img/gallery/frites-sel-prep.jpg";
-        page3.querySelector("img").src = "./src/img/gallery/hotdog2.jpg";
+        page1.querySelector("img").src = "./img/gallery/frites-sel.jpg";
+        page2.querySelector("img").src = "./img/gallery/frites-sel-prep.jpg";
+        page3.querySelector("img").src = "./img/gallery/hotdog2.jpg";
         break;
       case 2:
-        page1.querySelector("img").src =
-          "./src/img/gallery/sign-good-burger.jpg";
-        page2.querySelector("img").src = "./src/img/gallery/sign-restrooms.jpg";
-        page3.querySelector("img").src =
-          "./src/img/gallery/burger-and-fries.jpg";
+        page1.querySelector("img").src = "./img/gallery/sign-good-burger.jpg";
+        page2.querySelector("img").src = "./img/gallery/sign-restrooms.jpg";
+        page3.querySelector("img").src = "./img/gallery/burger-and-fries.jpg";
         break;
       case 3:
-        page1.querySelector("img").src = "./src/img/gallery/fries-paprika.jpg";
-        page2.querySelector("img").src = "./src/img/gallery/hamburger-expo.jpg";
-        page3.querySelector("img").src = "./src/img/gallery/hotdog-fancy.jpg";
+        page1.querySelector("img").src = "./img/gallery/fries-paprika.jpg";
+        page2.querySelector("img").src = "./img/gallery/hamburger-expo.jpg";
+        page3.querySelector("img").src = "./img/gallery/hotdog-fancy.jpg";
         break;
       default:
         break;

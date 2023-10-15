@@ -1,0 +1,18 @@
+// [NOTE]: @Alexander j'ai installé le pkg prettier  dans le code
+// comment ca le projet suivrait toujours qqls regles esthetiques (code formatting) de bases
+// ceci sont de preferences personnelles - j'ai mis les miens mais - tu peut mettre ca que tu veut
+// quand il y a plusiers devs sur un projet
+
+// https://prettier.io/docs/en/configuration
+
+// Apres tu pourrait bien voir `eslint` qui est un aautre outil pour le code 
+// regles a enforcer  dans le code -> pour un language. ON utilse suivant prettier + eslint (+typescript)
+
+{
+  "trailingComma": "all", // trailing commas wherever possible (this is a framework preference)
+  "tabWidth": 2, // 2 spaces per indentation-level
+  "semi": false,  // no semicolon
+  "singleQuote": true, // only single quotes
+  "useTabs": false, // prefer spaces over tabs
+  "printWidth": 120  // no more than 120 chars per line
+}

@@ -1,5 +1,23 @@
 import "../css/main.css";
 
+import fritesPaprika from "../img/gallery/frites-paprika.jpg";
+import fritesSel from "../img/gallery/frites-sel.jpg";
+import fritesSelPrep from "../img/gallery/frites-sel-prep.jpg";
+import hamburger from "../img/gallery/hamburger.jpg";
+import hamburgerCheese from "../img/gallery/hamburger-cheese.jpg";
+import hamburgerExpo from "../img/gallery/hamburger-expo.jpg";
+import hotdogMulti from "../img/gallery/hotdog-multi.jpg";
+import hotdogExpo from "../img/gallery/hotdog-expo.jpg";
+import hotdogFancy from "../img/gallery/hotdog-fancy.jpg";
+import signGoodBurger from "../img/gallery/sign-good-burger.jpg";
+import signRestrooms from "../img/gallery/sign-restrooms.jpg";
+import hamburgerAndFries from "../img/gallery/hamburger-and-fries.jpg";
+
+// [TODO]:
+// - [ ] Retire les comments pas necessaire -> prefer explicit code over comments
+// - [ ] Le contenu menuOpenButton et menuCloseButton est le meme, donc tu peux le mettre dans une fonction et l'appeler deux fois ?
+// - [ ] Retire les photos et/ou assets qui ne sont pas utilisés
+
 //NAVBAR
 // Sélectionnez les éléments du dropdown
 const menuOpenButton = document.querySelector(".menu-open");
@@ -37,28 +55,35 @@ boutonsPagination.forEach((bouton, index) => {
   bouton.addEventListener("click", (e) => {
     e.preventDefault(); // Empêchez le lien de naviguer
 
-    console.log(index, " I was clicked");
     // Changez la source des images en fonction du bouton cliqué
     switch (index) {
       case 0:
-        page1.querySelector("img").src = "./img/gallery/hamburger.jpg";
-        page2.querySelector("img").src = "./img/gallery/hotdog-multi.jpg";
-        page3.querySelector("img").src = "./img/gallery/hamburger-cheese.jpg";
+        // [NOTE]: @Alexander le problem c'etait ici je pense, tu creeais tes photos dynamiquement avec JS
+        // mais vite ne savais d'où les importer, donc au moment de build tout était deja buildé.
+        // 1. Tu devais les importer comment assets au debut
+        // 2. Tu devais aussi dire a vite où elle se trouvent regarde `vite.config.js defineConfig.resolve.gallery`
+
+        // page1.querySelector("img").src = "./img/gallery/hamburger.jpg";
+        // page2.querySelector("img").src = "./img/gallery/hotdog-multi.jpg";
+        // page3.querySelector("img").src = "./img/gallery/hamburger-cheese.jpg";
+        page1.querySelector("img").src = hamburger;
+        page2.querySelector("img").src = hotdogMulti;
+        page3.querySelector("img").src = hamburgerCheese;
         break;
       case 1:
-        page1.querySelector("img").src = "./img/gallery/frites-sel.jpg";
-        page2.querySelector("img").src = "./img/gallery/frites-sel-prep.jpg";
-        page3.querySelector("img").src = "./img/gallery/hotdog2.jpg";
+        page1.querySelector("img").src = fritesSel;
+        page2.querySelector("img").src = fritesSelPrep;
+        page3.querySelector("img").src = hotdogExpo;
         break;
       case 2:
-        page1.querySelector("img").src = "./img/gallery/sign-good-burger.jpg";
-        page2.querySelector("img").src = "./img/gallery/sign-restrooms.jpg";
-        page3.querySelector("img").src = "./img/gallery/burger-and-fries.jpg";
+        page1.querySelector("img").src = signGoodBurger;
+        page2.querySelector("img").src = signRestrooms;
+        page3.querySelector("img").src = hamburgerAndFries;
         break;
       case 3:
-        page1.querySelector("img").src = "./img/gallery/fries-paprika.jpg";
-        page2.querySelector("img").src = "./img/gallery/hamburger-expo.jpg";
-        page3.querySelector("img").src = "./img/gallery/hotdog-fancy.jpg";
+        page1.querySelector("img").src = fritesPaprika;
+        page2.querySelector("img").src = hamburgerExpo;
+        page3.querySelector("img").src = hotdogFancy;
         break;
       default:
         break;

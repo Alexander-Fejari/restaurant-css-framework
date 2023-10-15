@@ -7,8 +7,12 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-.history
+# pkgs
 node_modules
+.yarn/
+
+# Output
+.history
 dist
 dist-ssr
 *.local

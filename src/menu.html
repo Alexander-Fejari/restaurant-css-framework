@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+      name="viewport"
+    />
+    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+    <script defer src="./js/main.js" type="module"></script>
+    <link href="./src/img/favicon-32x32.png" rel="icon" type="image/x-icon" />
+    <title>Menu du restaurant</title>
+  </head>
+  <body class="w-full bg-slate-950 font-sans">
+    <div
+      class="lg:grid lg:grid-cols-12 lg:grid-rows-[9rem_1fr_1fr_1fr_1fr_9rem] lg:auto-rows-fr lg:auto-cols-fr"
+    >
+      <header
+        class="w-full h-full lg:h-36 bg-slate-950 flex flex-row justify-center item-center lg:col-span-12 z-50 navbar lg:fixed lg:content-center"
+      >
+        <div class="navbar">
+          <!-- Contenu navbar -->
+          <div class="dropdown">
+            <button
+              class="btn btn-ghost btn-circle smd:hidden menu-open"
+              tabindex="0"
+            >
+              <svg
+                class="h-[1.875rem] w-[1.875rem]"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 6h16M4 12h16M4 18h7"
+                  fill="#ffff"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
+            <button
+              class="btn btn-ghost btn-circle hidden smd:hidden menu-close"
+              tabindex="0"
+            >
+              <svg
+                class="h-[1.875rem] w-[1.875rem]"
+                fill="none"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.99486 7.00636C6.60433 7.39689 6.60433 8.03005 6.99486 8.42058L10.58 12.0057L6.99486 15.5909C6.60433 15.9814 6.60433 16.6146 6.99486 17.0051C7.38538 17.3956 8.01855 17.3956 8.40907 17.0051L11.9942 13.4199L15.5794 17.0051C15.9699 17.3956 16.6031 17.3956 16.9936 17.0051C17.3841 16.6146 17.3841 15.9814 16.9936 15.5909L13.4084 12.0057L16.9936 8.42059C17.3841 8.03007 17.3841 7.3969 16.9936 7.00638C16.603 6.61585 15.9699 6.61585 15.5794 7.00638L11.9942 10.5915L8.40907 7.00636C8.01855 6.61584 7.38538 6.61584 6.99486 7.00636Z"
+                  fill="#ffff"
+                />
+              </svg>
+            </button>
+            <ul
+              class="menu menu-sm absolute mt-3 z-[1] p-2 shadow bg-slate-900 rounded-box w-52 hidden"
+              tabindex="0"
+            >
+              <li><a href="/">Accueil</a></li>
+              <li><a href="gallery.html">Galerie</a></li>
+              <li><a href="menu.html">Menu</a></li>
+              <li><a href="restaurants.html">Restaurant</a></li>
+              <li><a href="contact.html">contact</a></li>
+            </ul>
+          </div>
+          <div class="navbar-center hidden smd:flex">
+            <ul class="menu menu-horizontal" tabindex="0">
+              <li><a href="contact.html">Accueil</a></li>
+              <li><a href="gallery.html">Galerie</a></li>
+              <li><a href="menu.html">Menu</a></li>
+              <li><a href="restaurants.html">Restaurant</a></li>
+              <li><a href="contact.html">contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="navbar-end">
+          <a class="btn btn-ghost normal-case text-xl">Manges et taîs-toi !</a>
+        </div>
+      </header>
+      <main
+        class="bg-slate-950 w-full h-full min-h-[80vh] flex flex-col justify-evenly items-center lg:col-span-12 lg:row-start-2 lg:row-span-4"
+      >
+        <h2 class="m-4 text-xl lg:text-6xl">Menu Manges et taîs-toi</h2>
+        <!-- Menu déroulant Entrées -->
+        <details
+          class="w-full max-h-full px-8 dropdown flex flex-col items-center mt-4 lg:w-1/2"
+        >
+          <summary class="btn btn-primary">Entrées</summary>
+          <ul>
+            <li class="flex flex-col justify-evenly p-2">
+              <h4 class="text-xl bold mt-2">Burger Mini</h4>
+              <p class="my-2" class="my-2">
+                Steak de bœuf, laitue, tomate, oignon.
+              </p>
+              <div class="flex flex-row justify-between items-center my-4">
+                <span class="badge badge-error">Carnivore</span>
+                <span class="badge badge-info">$5.99</span>
+              </div>
+            </li>
+            <li class="flex flex-col justify-evenly p-2">
+              <h4 class="text-xl bold">Burger Végé</h4>
+              <p class="my-2">
+                Pain, steak végétarien, laitue, tomate, fromage végétalien.
+              </p>
+              <div class="flex flex-row justify-between items-center my-4">
+                <span class="badge badge-success">Végétarien</span>
+                <span class="badge badge-info">$6.99</span>
+              </div>
+            </li>
+            <li class="flex flex-col justify-evenly p-2">
+              <h4 class="text-xl bold">Frites</h4>
+              <p class="my-2">
+                Frites croustillantes avec assaisonnement spécial.
+              </p>
+              <div class="flex flex-row justify-between items-center my-4">
+                <span class="badge badge-error">Carnivore</span>
+                <span class="badge badge-info">$2.99</span>
+              </div>
+            </li>
+          </ul>
+        </details>
+
+        <!-- Menu déroulant Plats -->
+        <details
+          class="w-full max-h-full px-8 dropdown flex flex-col items-center mt-4 lg:w-1/2"
+        >
+          <summary class="btn btn-primary">Plats</summary>
+          <ul>
+            <li class="flex flex-col justify-evenly p-2">
+              <h4 class="text-xl bold mt-2">Burger Deluxe</h4>
+              <p class="my-2" class="my-2">
+                Double steak de bœuf, fromage, laitue, tomate, oignon.
+              </p>
+              <div class="flex flex-row justify-between items-center my-4">
+                <span class="badge badge-error">Carnivore</span>
+                <span class="badge badge-info">$8.99</span>
+              </div>
+            </li>
+            <li class="flex flex-col justify-evenly p-2">
+              <h4 class="text-xl bold">Burger Végé Suprême</h4>
+              <p class="my-2">
+                Pain artisanal, steak végétarien, avocat, laitue, tomate, mayo
+                végétalienne.
+              </p>
+              <div class="flex flex-row justify-between items-center my-4">
+                <span class="badge badge-success">Végétarien</span>
+                <span class="badge badge-info">$9.99</span>
+              </div>
+            </li>
+            <li class="flex flex-col justify-evenly p-2">
+              <h4 class="text-xl bold">Onion Rings</h4>
+              <p class="my-2">Rondelles d'oignon frites croustillantes.</p>
+              <div class="flex flex-row justify-between items-center my-4">
+                <span class="badge badge-error">Carnivore</span>
+                <span class="badge badge-info">$3.99</span>
+              </div>
+            </li>
+          </ul>
+        </details>
+
+        <!-- Menu déroulant Desserts -->
+        <details
+          class="w-full max-h-full px-8 dropdown flex flex-col items-center mt-4 lg:w-1/2"
+        >
+          <summary class="btn btn-primary">Desserts</summary>
+          <ul>
+            <li class="flex flex-col justify-evenly p-2">
+              <h4 class="text-xl bold mt-2">Sundae au Chocolat</h4>
+              <p class="my-2" class="my-2">
+                Glace à la vanille, sauce au chocolat, crème fouettée, noix.
+              </p>
+              <div class="flex flex-row justify-between items-center my-4">
+                <span class="badge badge-success">Végétarien</span>
+                <span class="badge badge-info">$4.99</span>
+              </div>
+            </li>
+            <li class="flex flex-col justify-evenly p-2">
+              <h4 class="text-xl bold">Milkshake Vanille</h4>
+              <p class="my-2">Glace à la vanille, lait, crème fouettée.</p>
+              <div class="flex flex-row justify-between items-center my-4">
+                <span class="badge badge-success">Végétarien</span>
+                <span class="badge badge-info">$3.99</span>
+              </div>
+            </li>
+            <li class="flex flex-col justify-evenly p-2">
+              <h4 class="text-xl bold">Tarte aux Pommes</h4>
+              <p class="my-2">
+                Tarte aux pommes maison avec une touche de cannelle.
+              </p>
+              <div class="flex flex-row justify-between items-center my-4">
+                <span class="badge badge-success">Végétarien</span>
+                <span class="badge badge-info">$5.99</span>
+              </div>
+            </li>
+          </ul>
+        </details>
+      </main>
+      <footer
+        class="mt-8 lg:h-36 lg:col-span-full lg:row-span-1 lg:row-start-6 footer footer-center p-4 bg-slate-900 text-base-content"
+      >
+        <aside>
+          <p>Manges et taîs-toi © 2023 - BeCode</p>
+        </aside>
+      </footer>
+    </div>
+  </body>
+</html>

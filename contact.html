@@ -6,17 +6,13 @@
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
       name="viewport"
     />
-    
     <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+    
     <link href="./src/img/favicon-32x32.png" rel="icon" type="image/x-icon" />
-    <title>Franchises du restaurant</title>
+    <title>Galerie photos du restaurant</title>
     <script type="module" crossorigin src="/assets/main-47a2647d.js"></script>
     <link rel="stylesheet" href="/assets/main-3d073450.css">
   </head>
-  <body></body>
-</html>
-<!DOCTYPE html>
-
   <body class="w-full bg-slate-950 font-sans">
     <div
       class="lg:grid lg:grid-cols-12 lg:grid-rows-[9rem_1fr_1fr_1fr_1fr_9rem] lg:auto-rows-fr lg:auto-cols-fr"
@@ -89,53 +85,119 @@
         </div>
       </header>
       <main
-        class="bg-slate-950 h-full mb-8 lg:col-span-12 lg:row-start-2 lg:row-span-4"
+        class="bg-slate-950 flex flex-col justify-evenly items-center lg:col-span-12 lg:row-start-2 lg:row-span-4"
       >
-        <div
-          class="flex flex-col justify-center items-center md:justify-start md:items-start"
-        >
-          <h2 class="text-xl text-center m-8 lg:text-6xl">
-            Informations sur le Restaurant
-          </h2>
-          <div class="w-full flex flex-col md:flex-row md:justify-between">
-            <!-- Informations sur les adresses -->
-            <div class="m-8 rounded shadow-md mb-4 md:w-1/2">
-              <h2 class="text-xl font-bold mb-2">Adresses</h2>
-              <ul class="list-disc pl-4">
-                <li>123 Rue du Restaurant, 1000 Bruxelles</li>
-                <li>456 Avenue de la Franchise, 1000 Bruxelles</li>
-              </ul>
-            </div>
-            <!-- Horaires d'ouverture -->
-            <div class="m-8 rounded shadow-md md:w-1/2">
-              <h2 class="text-xl font-bold mb-2">Horaires d'Ouverture</h2>
-              <ul>
-                <li class="mb-2">
-                  <span class="font-bold">Lundi - Vendredi :</span> 10:00 -
-                  22:00
-                </li>
-                <li class="mb-2">
-                  <span class="font-bold">Samedi :</span> 11:00 - 23:00
-                </li>
-                <li><span class="font-bold">Dimanche :</span> Fermé</li>
-              </ul>
-            </div>
-          </div>
+        <div class="flex flex-col items-center md:w-1/2">
+          <h1 class="text-3xl font-bold mb-4">Formulaire de Contact</h1>
 
-          <!-- Carte -->
-          <div class="m-8 rounded shadow-md mb-4 md:w-1/2">
-            <h2 class="text-xl font-bold mb-2">Carte</h2>
-            <img alt="maps" src="/assets/maps-a8c74f23.png" />
-          </div>
+          <!-- Formulaire de contact -->
+          <form action="#" class="p-4 rounded shadow-md w-full" method="POST">
+            <!-- Prénom -->
+            <div class="mb-4">
+              <label class="block text-sm font-bold mb-2" for="firstname"
+                >Prénom</label
+              >
+              <input
+                class="w-full px-3 py-2 border rounded-lg"
+                id="firstname"
+                name="firstname"
+                required
+                type="text"
+              />
+            </div>
+
+            <!-- Nom de famille -->
+            <div class="mb-4">
+              <label class="block text-sm font-bold mb-2" for="lastname"
+                >Nom de Famille</label
+              >
+              <input
+                class="w-full px-3 py-2 border rounded-lg"
+                id="lastname"
+                name="lastname"
+                required
+                type="text"
+              />
+            </div>
+
+            <!-- Email -->
+            <div class="mb-4">
+              <label class="block text-sm font-bold mb-2" for="email"
+                >Email</label
+              >
+              <input
+                class="w-full px-3 py-2 border rounded-lg"
+                id="email"
+                name="email"
+                required
+                type="email"
+              />
+            </div>
+
+            <!-- Sujet du Message (Liste déroulante) -->
+            <div class="mb-4">
+              <label class="block text-sm font-bold mb-2" for="subject"
+                >Sujet du Message</label
+              >
+              <select
+                class="w-full px-3 py-2 border rounded-lg"
+                id="subject"
+                name="subject"
+              >
+                <option value="1">Question</option>
+                <option value="2">Reservation</option>
+                <option value="3">Demande de partenariat</option>
+                <option value="4">Autre</option>
+              </select>
+            </div>
+
+            <!-- Message -->
+            <div class="mb-4">
+              <label class="block text-sm font-bold mb-2" for="message"
+                >Message</label
+              >
+              <textarea
+                class="w-full px-3 py-2 border rounded-lg"
+                id="message"
+                name="message"
+                required
+                rows="4"
+              ></textarea>
+            </div>
+
+            <!-- Bouton Envoyer avec icône Font Awesome -->
+            <div class="mb-4">
+              <button
+                class="bg-blue-500 text-white px-4 py-2 rounded-lg flex items-center"
+                type="submit"
+              >
+                Envoyer
+                <svg
+                  class="ml-2 w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </form>
         </div>
       </main>
+      <footer
+        class="mt-8 lg:h-36 lg:col-span-full lg:row-span-1 lg:row-start-6 footer footer-center p-4 bg-slate-900 text-base-content"
+      >
+        <aside>
+          <p>Manges et taîs-toi © 2023 - BeCode</p>
+        </aside>
+      </footer>
     </div>
-    <footer
-      class="mt-8 lg:h-36 lg:col-span-full lg:row-span-1 lg:row-start-6 footer footer-center p-4 bg-slate-900 text-base-content"
-    >
-      <aside>
-        <p>Manges et taîs-toi © 2023 - BeCode</p>
-      </aside>
-    </footer>
   </body>
 </html>

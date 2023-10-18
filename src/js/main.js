@@ -14,9 +14,7 @@ import signRestrooms from '../img/gallery/sign-restrooms.jpg'
 import hamburgerAndFries from '../img/gallery/hamburger-and-fries.jpg'
 
 // [TODO]:
-// - [ ] Retire les comments pas necessaire -> prefer explicit code over comments
 // - [ ] Le contenu menuOpenButton et menuCloseButton est le meme, donc tu peux le mettre dans une fonction et l'appeler deux fois ?
-// - [ ] Retire les photos et/ou assets qui ne sont pas utilisés
 
 //NAVBAR
 // Sélectionnez les éléments du dropdown
@@ -26,18 +24,18 @@ const menuContent = document.querySelector('.menu-sm')
 
 // Ajoutez un gestionnaire d'événement au bouton "menu-open" pour ouvrir le dropdown
 menuOpenButton.addEventListener('click', () => {
-  menuContent.classList.add('flex')
-  menuContent.classList.remove('hidden')
-  menuOpenButton.classList.add('hidden')
-  menuCloseButton.classList.remove('hidden')
+    menuContent.classList.add('flex')
+    menuContent.classList.remove('hidden')
+    menuOpenButton.classList.add('hidden')
+    menuCloseButton.classList.remove('hidden')
 })
 
 // Ajoutez un gestionnaire d'événement au bouton "menu-close" pour fermer le dropdown
 menuCloseButton.addEventListener('click', () => {
-  menuContent.classList.remove('flex')
-  menuContent.classList.add('hidden')
-  menuOpenButton.classList.remove('hidden')
-  menuCloseButton.classList.add('hidden')
+    menuContent.classList.remove('flex')
+    menuContent.classList.add('hidden')
+    menuOpenButton.classList.remove('hidden')
+    menuCloseButton.classList.add('hidden')
 })
 
 //GALLERY
@@ -52,41 +50,33 @@ const boutonsPagination = document.querySelectorAll('#pagination a')
 
 // Ajoutez des écouteurs de clic à chaque bouton de pagination
 boutonsPagination.forEach((bouton, index) => {
-  bouton.addEventListener('click', (e) => {
-    e.preventDefault() // Empêchez le lien de naviguer
+    bouton.addEventListener('click', (e) => {
+        e.preventDefault() // Empêchez le lien de naviguer
 
-    // Changez la source des images en fonction du bouton cliqué
-    switch (index) {
-      case 0:
-        // [NOTE]: @Alexander le problem c'etait ici je pense, tu creeais tes photos dynamiquement avec JS
-        // mais vite ne savais d'où les importer, donc au moment de build tout était deja buildé.
-        // 1. Tu devais les importer comment assets au debut
-        // 2. Tu devais aussi dire a vite où elle se trouvent regarde `vite.config.js defineConfig.resolve.gallery`
-
-        // page1.querySelector("img").src = "./img/gallery/hamburger.jpg";
-        // page2.querySelector("img").src = "./img/gallery/hotdog-multi.jpg";
-        // page3.querySelector("img").src = "./img/gallery/hamburger-cheese.jpg";
-        page1.querySelector('img').src = hamburger
-        page2.querySelector('img').src = hotdogMulti
-        page3.querySelector('img').src = hamburgerCheese
-        break
-      case 1:
-        page1.querySelector('img').src = fritesSel
-        page2.querySelector('img').src = fritesSelPrep
-        page3.querySelector('img').src = hotdogExpo
-        break
-      case 2:
-        page1.querySelector('img').src = signGoodBurger
-        page2.querySelector('img').src = signRestrooms
-        page3.querySelector('img').src = hamburgerAndFries
-        break
-      case 3:
-        page1.querySelector('img').src = fritesPaprika
-        page2.querySelector('img').src = hamburgerExpo
-        page3.querySelector('img').src = hotdogFancy
-        break
-      default:
-        break
-    }
-  })
+        // Changez la source des images en fonction du bouton cliqué
+        switch (index) {
+            case 0:
+                page1.querySelector('img').src = hamburger
+                page2.querySelector('img').src = hotdogMulti
+                page3.querySelector('img').src = hamburgerCheese
+                break
+            case 1:
+                page1.querySelector('img').src = fritesSel
+                page2.querySelector('img').src = fritesSelPrep
+                page3.querySelector('img').src = hotdogExpo
+                break
+            case 2:
+                page1.querySelector('img').src = signGoodBurger
+                page2.querySelector('img').src = signRestrooms
+                page3.querySelector('img').src = hamburgerAndFries
+                break
+            case 3:
+                page1.querySelector('img').src = fritesPaprika
+                page2.querySelector('img').src = hamburgerExpo
+                page3.querySelector('img').src = hotdogFancy
+                break
+            default:
+                break
+        }
+    })
 })
